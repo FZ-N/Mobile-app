@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/item1"
+        android:title="Gestion des étudiants"
+        android:icon="@drawable/ic_add_black_24dp"
+
+        />
+    <item android:id="@+id/item2"
+        android:title="Gestion des profeseurs"
+
+        />
+    <item android:id="@+id/item3"
+
+        android:icon="@drawable/add"
+        android:title="Ajouter un évenement"
+        />
+
+    <item android:id="@+id/item4"
+        android:title="Ajouter un cours"
+        android:icon="@drawable/add"
+     />
+    <item android:id="@+id/item5"
+
+        android:title="Ajouter un emploi du temps"
+        android:icon="@drawable/add"
+        />
+    <item android:id="@+id/item6"
+        android:title="Envoyer un message"
+        android:icon="@drawable/add"
+        />
+    <item android:id="@+id/item7"
+        android:title="Ajouter un étudiant"
+        android:icon="@drawable/add"
+        />
+
+
+    <item android:id="@+id/item88"
+        android:title="Menu principal"
+
+
+        />
+
+    <item android:id="@+id/item9"
+    android:title="Emploi du temps"
+
+        />
+    <item android:id="@+id/item98"
+        android:title="List des modules"
+        android:visible="false"
+
+        />
+
+    <item
+        android:id="@+id/item8"
+        android:icon="@drawable/add"
+        android:title="Ajouter un professeur"
+
+        />
+
+    <item
+        android:id="@+id/item99"
+        android:icon="@drawable/add"
+        android:title="Ajouter un Module"
+
+        android:visible="false" />
+
+    <item android:id="@+id/item10"
+        android:title="Se déconnecter"
+
+        />
+</menu>

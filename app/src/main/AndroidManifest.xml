@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myapplication12">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ensias"
+        android:label="IWIM HUB"
+        android:largeHeap="true"
+        android:roundIcon="@drawable/ensias"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Scolarité.Addmodule" />
+        <activity android:name=".Scolarité.Listmodules" />
+        <activity android:name=".Messagerie.Listmessage" />
+        <activity android:name=".Messagerie.Listmessageprof" />
+        <activity android:name=".Evenement.Consultevnt" />
+        <activity android:name=".Scolarité.AddEmploit" />
+        <activity android:name=".Scolarité.AddEmploit1" />
+        <activity android:name=".Scolarité.AddEmploit2" />
+        <activity android:name=".Scolarité.AddEmploit3" />
+        <activity android:name=".Gestion_etudiant_prof.Editetudiant" />
+        <activity android:name=".Scolarité.Editcours" />
+        <activity android:name=".Gestion_etudiant_prof.Addprof" />
+        <activity android:name=".Gestion_etudiant_prof.Addetudiant" />
+        <activity android:name=".Gestion_etudiant_prof.Listetudiant" />
+        <activity android:name=".Scolarité.Listcours" />
+        <activity android:name=".Scolarité.Emploit" />
+        <activity android:name=".Scolarité.Emploit1" />
+        <activity android:name=".Scolarité.Emploit2" />
+        <activity android:name=".Scolarité.Emploit3" />
+        <activity android:name=".Scolarité.em" />
+        <activity android:name=".Menu.Menuscolarite" />
+        <activity android:name=".Gestion_etudiant_prof.Listprof" />
+        <activity android:name=".Scolarité.Addcours" />
+        <activity android:name=".Gestion_etudiant_prof.Editprof" />
+        <activity android:name=".Evenement.Addevent" />
+        <activity android:name=".Messagerie.Addmessage" />
+        <activity android:name=".Messagerie.Discussion" />
+        <activity android:name=".Evenement.Editevent" />
+        <activity android:name=".Evenement.Listevent" />
+        <activity android:name=".Menu.Menuevent" />
+        <activity android:name=".Menu.Menuprof" />
+        <activity android:name=".Menu.signup" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Menu.Menuetudiant" />
+        <activity android:name=".Menu.Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

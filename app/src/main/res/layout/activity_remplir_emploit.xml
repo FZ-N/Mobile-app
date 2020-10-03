@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <TableRow android:padding="5dip">
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_span="1"
+            android:gravity="center_horizontal"
+            android:text="sem"
+            android:textSize="25sp" />
+    </TableRow>
+
+    <TableRow>
+
+        <TextView
+            android:layout_width="63dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            android:text="Lu"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:text="Ma"
+            android:textSize="16sp" />
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="3"
+            android:text="Me"
+            android:textSize="16sp" />
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="4"
+            android:text="JE"
+            android:textSize="16sp" />
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="5"
+            android:text="Dem"
+            android:textSize="16sp" />
+
+
+
+
+    </TableRow>
+    <TableRow>
+
+        <Spinner
+            android:id = "@+id/spinner21"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+
+        <Spinner
+            android:id = "@+id/spinner22"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+        <Spinner
+            android:id = "@+id/spinner23"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+        <Spinner
+            android:id = "@+id/spinner24"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+        <Spinner
+            android:id = "@+id/spinner25"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+
+
+
+
+
+    </TableRow>
+    <TableRow>
+
+        <Spinner
+            android:id = "@+id/spinner31"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+
+        <Spinner
+            android:id = "@+id/spinner32"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+        <Spinner
+            android:id = "@+id/spinner33"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+        <Spinner
+            android:id = "@+id/spinner34"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+        <Spinner
+            android:id = "@+id/spinner35"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+
+
+
+
+
+    </TableRow>
+    <TableRow>
+
+        <Spinner
+            android:id = "@+id/spinner41"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+
+        <Spinner
+            android:id = "@+id/spinner42"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+        <Spinner
+            android:id = "@+id/spinner43"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+        <Spinner
+            android:id = "@+id/spinner44"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+        <Spinner
+            android:id = "@+id/spinner45"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+
+
+
+
+
+    </TableRow>
+    <TableRow>
+
+        <Spinner
+            android:id = "@+id/spinner51"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+
+        <Spinner
+            android:id = "@+id/spinner52"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+        <Spinner
+            android:id = "@+id/spinner53"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+        <Spinner
+            android:id = "@+id/spinner54"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+        <Spinner
+            android:id = "@+id/spinner55"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+
+
+
+
+
+    </TableRow>
+    <TableRow>
+
+        <Spinner
+            android:id = "@+id/spinner61"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+
+        <Spinner
+            android:id = "@+id/spinner62"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+        <Spinner
+            android:id = "@+id/spinner63"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+        <Spinner
+            android:id = "@+id/spinner64"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+        <Spinner
+            android:id = "@+id/spinner65"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+
+
+
+
+
+    </TableRow>
+    <TableRow>
+
+        <Spinner
+            android:id = "@+id/spinner71"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+
+        <Spinner
+            android:id = "@+id/spinner72"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+        <Spinner
+            android:id = "@+id/spinner73"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+        <Spinner
+            android:id = "@+id/spinner74"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+        <Spinner
+            android:id = "@+id/spinner75"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+
+
+
+
+
+    </TableRow>
+    <TableRow>
+
+        <Spinner
+            android:id = "@+id/spinner81"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+
+        <Spinner
+            android:id = "@+id/spinner82"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+        <Spinner
+            android:id = "@+id/spinner83"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+        <Spinner
+            android:id = "@+id/spinner84"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+        <Spinner
+            android:id = "@+id/spinner85"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+
+
+
+
+
+    </TableRow>
+    <TableRow>
+
+        <Spinner
+            android:id = "@+id/spinner91"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+
+        <Spinner
+            android:id = "@+id/spinner92"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+        <Spinner
+            android:id = "@+id/spinner93"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+        <Spinner
+            android:id = "@+id/spinner94"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+        <Spinner
+            android:id = "@+id/spinner95"
+            android:prompt = "@string/app_name"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+
+            />
+
+
+
+
+
+    </TableRow>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="20dp">
+        <TextView
+            android:id="@+id/valideremploit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:text="Valider"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            android:padding="16dp"
+            android:layout_marginBottom="50dp"
+            android:letterSpacing="0.2"/>
+
+
+    </LinearLayout>
+
+
+
+</TableLayout>

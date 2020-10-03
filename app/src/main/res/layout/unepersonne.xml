@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="80dp">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:gravity="left"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/nompersonne"
+
+            android:layout_width="94dp"
+            android:layout_height="29dp"
+            android:layout_marginLeft="1dp"
+
+            android:background="#00000000"
+            android:hint="Personne nom :"
+            android:inputType="text"
+            android:letterSpacing="0.1"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/infopersonne"
+
+            android:layout_width="142dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="15dp"
+            android:background="#00000000"
+            android:hint=""
+            android:inputType="text"
+            android:letterSpacing="0.1"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textSize="15dp" />
+        <ImageView
+            android:id="@+id/edit_personne"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/cherch"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/delet_personne"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/supprimer" />
+        <CheckBox
+            android:id="@+id/choisirpersonne"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:buttonTint="#DA5F5F"
+            android:textColor="#DA5F5F"
+            android:textColorHint="#F84242"
+            />
+
+
+
+    </LinearLayout>
+</LinearLayout>

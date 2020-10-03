@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">My Application12</string>
+
+    <string name="country__prompt">Choose a type</string>
+
+    <string-array name="country__arrays">
+        <item>Sport</item>
+        <item>News</item>
+        <item>Other</item>
+
+    </string-array>
+</resources>

@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-firestore.js"></script>
+    <title>Emploi du temps </title>
+    <link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/demo/demo.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
+    <script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>
+</head>
+<body>
+
+
+<h1>Vos créneaux pour:</h1>
+
+<table>
+    <tr>
+        <td>
+            <h1 id="semestre">Semestre : </h1>
+        </td>
+        <td>
+            <h1 id="semaine"></h1>
+        </td>
+    </tr>
+</table>
+<div style="width:550px;">
+    <div class="left">
+
+    </div>
+    <div class="right">
+        <table>
+            <tr>
+                <td class="blank"></td>
+                <td class="title">8h30 <b>-</b> 10h30</td>
+                <td class="title">10h30 <b>-</b> 12h30</td>
+                <td class="title">14h00 <b>-</b> 16h00</td>
+                <td class="title">16h00 <b>-</b> 18h00</td>
+            </tr>
+            <tr>
+                <td class="time"><b>Lundi</b></td>
+                <td class="drop" id="l8"></td>
+                <td class="drop" id="l10"></td>
+                <td class="drop" id="l14"></td>
+                <td class="drop" id="l16"></td>
+            </tr>
+            <tr>
+                <td class="time"><b>Mardi</b></td>
+                <td class="drop" id="m8"></td>
+                <td class="drop" id="m10"></td>
+                <td class="drop" id="m14"></td>
+                <td class="drop" id="m16"></td>
+            </tr>
+            <tr>
+                <td class="time"><b>Mercredi</b></td>
+                <td class="drop" id="me8"></td>
+                <td class="drop" id="me10"></td>
+                <td class="drop" id="me14"></td>
+                <td class="drop" id="me16"></td>
+            </tr>
+            <tr>
+                <td class="time"><b>Jeudi</b></td>
+                <td class="drop" id="j8"></td>
+                <td class="drop" id="j10"></td>
+                <td class="drop" id="j14"></td>
+                <td class="drop" id="j16"></td>
+            </tr>
+            <tr>
+                <td class="time"><b>Vendredi</b></td>
+                <td class="drop" id="v8"></td>
+                <td class="drop" id="v10"></td>
+                <td class="drop" id="v14"></td>
+                <td class="drop" id="v16"></td>
+            </tr>
+
+
+        </table>
+    </div>
+</div>
+<style type="text/css">
+        .left {
+            width: 120px;
+            float: left;
+        }
+
+            .left table {
+                background: #00000;
+            }
+
+            .left td {
+                background: #eee;
+            }
+
+        .right {
+            float: right;
+            width: 570px;
+        }
+
+            .right table {
+                background: #000000;
+                width: 100%;
+            }
+
+            .right td {
+                background: #ffb5b5;
+                color: #000000;
+                text-align: center;
+            }
+
+            .right td {
+                background: #ffb5b5;
+            }
+
+                .right td.drop {
+                    background: #fafafa;
+                    width: 100px;
+                }
+
+                .right td.over {
+                    background: #FBEC88;
+                }
+
+        .time {
+            text-align: center;
+            font-size: 16px;
+            background: #fafafa;
+            color: #red;
+            width: 100px;
+        }
+
+        .title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 12px;
+            background: #fafafa;
+            color: #red;
+            width: 100px;
+        }
+
+        .assigned {
+            border: 1px solid #BC2A4D;
+        }
+
+        .trash {
+            background-color: red;
+        }
+    </style>
+<script>
+function myVar(module) {
+        var firebaseConfig = {
+            apiKey: "AIzaSyAXpZVxXmfSkwPt9CPgCzUPayojxV_CLBE",
+            authDomain: "iwim-e513e.firebaseapp.com",
+            databaseURL: "https://iwim-e513e.firebaseio.com",
+            projectId: "iwim-e513e",
+            storageBucket: "iwim-e513e.appspot.com",
+            messagingSenderId: "817803215381",
+            appId: "1:817803215381:web:068b6148a05f4930c9841c",
+            measurementId: "G-CYP00PQKX3"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        var db = firebase.firestore();
+
+        var sem = 4;
+          var today = new Date();
+
+
+                    if (today.getMonth() + 1 > 8 || (today.getMonth() + 1 < 2 && today.getDate() < 15)) {
+                        sem = 3;
+                    }
+
+        db.collection("emp2").get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+
+
+                if (doc.data().jour == "Lundi") {
+                    document.getElementById("semestre").innerHTML = "Semestre : " + sem;
+                    document.getElementById("semaine").innerHTML = "<span  STYLE='padding:0 0 0 20px;'>Semaine : " + `${doc.data().semaine}`;
+                    if ( doc.data().mod == module) {
+                    if (doc.data().hd == "8:30") {
+                        document.getElementById("l8").innerHTML = "<h3>" + `${doc.data().mod}` + "</h3>";
+                        document.getElementById("l8").innerHTML += "(" + `${doc.data().dur}` + " heures)";
+                    }
+
+
+                    if (doc.data().hd == "10:30") {
+                        document.getElementById("l10").innerHTML = "<h3>" + `${doc.data().mod}` + "</h3>";
+                        document.getElementById("l10").innerHTML += "(" + `${doc.data().dur}` + " heures)";
+                    }
+                    if (doc.data().hd == "14:00") {
+                        document.getElementById("l14").innerHTML = "<h3>" + `${doc.data().mod}` + "</h3>";
+                        document.getElementById("l14").innerHTML += "(" + `${doc.data().dur}` + " heures)";
+                    }
+                    if (doc.data().hd == "16:00") {
+                        document.getElementById("l16").innerHTML = "<h3>" + `${doc.data().mod}` + "</h3>";
+                        document.getElementById("l16").innerHTML += "(" + `${doc.data().dur}` + " heures)";
+                    }
+                }
+                }
+
+                if ( doc.data().mod == module) {
+                if (doc.data().jour == "Mardi") {
+
+                    if (doc.data().hd == "8:30") {
+                        document.getElementById("m8").innerHTML = "<h3>" + `${doc.data().mod}` + "</h3>";
+                        document.getElementById("m8").innerHTML += "(" + `${doc.data().dur}` + " heures)";
+                    }
+                    if (doc.data().hd == "10:30") {
+                        document.getElementById("m10").innerHTML = "<h3>" + `${doc.data().mod}` + "</h3>";
+                        document.getElementById("m10").innerHTML += "(" + `${doc.data().dur}` + " heures)";
+                    }
+                    if (doc.data().hd == "14:00") {
+                        document.getElementById("m14").innerHTML = "<h3>" + `${doc.data().mod}` + "</h3>";
+                        document.getElementById("m14").innerHTML += "(" + `${doc.data().dur}` + " heures)";
+                    }
+                    if (doc.data().hd == "16:00") {
+                        document.getElementById("m16").innerHTML = "<h3>" + `${doc.data().mod}` + "</h3>";
+                        document.getElementById("m16").innerHTML += "(" + `${doc.data().dur}` + " heures)";
+                    }
+                }
+
+                if (doc.data().jour == "Mercredi") {
+                    if (doc.data().hd == "8:30") {
+                        document.getElementById("me8").innerHTML = "<h3>" + `${doc.data().mod}` + "</h3>";
+                        document.getElementById("me8").innerHTML += "(" + `${doc.data().dur}` + " heures)";
+                    }
+                    if (doc.data().hd == "10:30") {
+                        document.getElementById("me10").innerHTML = "<h3>" + `${doc.data().mod}` + "</h3>";
+                        document.getElementById("me10").innerHTML += "(" + `${doc.data().dur}` + " heures)";
+                    }
+                    if (doc.data().hd == "14:00") {
+                        document.getElementById("me14").innerHTML = "<h3>" + `${doc.data().mod}` + "</h3>";
+                        document.getElementById("me14").innerHTML += "(" + `${doc.data().dur}` + " heures)";
+                    }
+                    if (doc.data().hd == "16:00") {
+                        document.getElementById("me16").innerHTML = "<h3>" + `${doc.data().mod}` + "</h3>";
+                        document.getElementById("me16").innerHTML += "(" + `${doc.data().dur}` + " heures)";
+                    }
+                }
+                if (doc.data().jour == "Jeudi") {
+                    if (doc.data().hd == "8:30") {
+                        document.getElementById("j8").innerHTML = "<h3>" + `${doc.data().mod}` + "</h3>";
+                        document.getElementById("j8").innerHTML += "(" + `${doc.data().dur}` + " heures)";
+                    }
+                    if (doc.data().hd == "10:30") {
+                        document.getElementById("j10").innerHTML = "<h3>" + `${doc.data().mod}` + "</h3>";
+                        document.getElementById("j10").innerHTML += "(" + `${doc.data().dur}` + " heures)";
+                    }
+                    if (doc.data().hd == "14:00") {
+                        document.getElementById("j14").innerHTML = "<h3>" + `${doc.data().mod}` + "</h3>";
+                        document.getElementById("j14").innerHTML += "(" + `${doc.data().dur}` + " heures)";
+                    }
+                    if (doc.data().hd == "16:00") {
+                        document.getElementById("j16").innerHTML = "<h3>" + `${doc.data().mod}` + "</h3>";
+                        document.getElementById("j16").innerHTML += "(" + `${doc.data().dur}` + " heures)";
+                    }
+                }
+                if (doc.data().jour == "Vendredi") {
+                    if (doc.data().hd == "8:30") {
+                        document.getElementById("v8").innerHTML = "<h3>" + `${doc.data().mod}` + "</h3>";
+                        document.getElementById("v8").innerHTML += "(" + `${doc.data().dur}` + " heures)";
+                    }
+                    if (doc.data().hd == "10:30") {
+                        document.getElementById("v10").innerHTML = "<h3>" + `${doc.data().mod}` + "</h3>";
+                        document.getElementById("v10").innerHTML += "(" + `${doc.data().dur}` + " heures)";
+                    }
+                    if (doc.data().hd == "14:00") {
+                        document.getElementById("v14").innerHTML = "<h3>" + `${doc.data().mod}` + "</h3>";
+                        document.getElementById("v14").innerHTML += "(" + `${doc.data().dur}` + " heures)";
+                    }
+                    if (doc.data().hd == "16:00") {
+                        document.getElementById("v16").innerHTML = "<h3>" + `${doc.data().mod}` + "</h3>";
+                        document.getElementById("v16").innerHTML += "(" + `${doc.data().dur}` + " heures)";
+                    }
+                }
+                }
+            });
+        })
+        }
+    </script>
+</body>
+</html>
+
